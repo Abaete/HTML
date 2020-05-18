@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <html>
-
-
 <body>
+<div id="chat-icon">
+      <p>Nome: Adison</p><br />
+      <input type="hidden" id="cpf" name="cpf" value="33888849004">    
+</div>
+
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
@@ -13,19 +16,16 @@
 		outline: 1px solid #005290;
 	}
 </style>
-	
-<script name="tophatvariables">
-	cpf="33888849004"
-</script>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	liveagent.addCustomDetail("CPF", cpf).saveToTranscript("CPF__c");
+	
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = '';
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.addCustomDetail("CPF", document.getElementById('cpf').value).saveToTranscript("CPF__c");
 
 		embedded_svc.init(
 			'https://empiricus--devcarlos.my.salesforce.com',
@@ -54,7 +54,6 @@
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
-	
+</script>	
 </body>
 </html>
