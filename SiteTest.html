@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <html>
 <body>
-<div id="chat-icon">
-      <p>Nome: Adison</p><br />
-      <input type="hidden" id="cpf" name="cpf" value="33888849004">    
-</div>
-<style type='text/css'>
+	<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -39,7 +34,7 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-                //embedded_svc.addCustomDetail("CPF", document.getElementById('cpf').value).saveToTranscript("CPF__c");
+
 		embedded_svc.init(
 			'https://empiricus--devcarlos.my.salesforce.com',
 			'https://devcarlos-partnercommunityemp.cs2.force.com/atendimentoBOT',
@@ -67,6 +62,6 @@
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>	
+</script>
 </body>
 </html>
