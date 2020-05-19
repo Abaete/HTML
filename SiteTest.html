@@ -40,7 +40,7 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-                embedded_svc.addCustomDetail("CPF", document.getElementById('cpf').value).saveToTranscript("CPF");
+                embedded_svc.addCustomDetail("CPF", document.getElementById('cpf').value).saveToTranscript("CPF__c");
 		embedded_svc.init(
 			'https://empiricus--devcarlos.my.salesforce.com',
 			'https://devcarlos-partnercommunityemp.cs2.force.com/atendimentoBOT',
