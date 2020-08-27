@@ -1,0 +1,14 @@
+<body>
+  <script>
+    var receiveMessage = function (evt) {
+      if (evt.data === 'MM:3PCunsupported') {
+        console.log('third party cookies are not supported');
+      } else if (evt.data === 'MM:3PCsupported') {
+        console.log('third party cookies are supported');
+      }
+    };
+    window.addEventListener("message", receiveMessage, false);
+  </script>
+
+  <iframe src="https://htmlpreview.github.io/?https://github.com/Abaete/HTML/blob/master/start.html" style="display:none" />
+</body>
